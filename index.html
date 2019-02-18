@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>WebRTC Audio/Video-Chat</title>
+        <link rel="stylesheet" type="text/css" href="/assets/styles.css"/>
+    </head>
+
+    <body>
+        <div id="app">
+            <span id="myid"></span>
+            <div id="video_wrapper">
+                <video id="selfview" autoplay></video>
+                <video id="remoteview" autoplay></video>
+            </div>
+            <button id="endCall" style="display: none;" onclick="endCurrentCall()">End Call </button>
+            <div id="list">
+                <ul id="users">
+
+                </ul>
+            </div>
+        </div>
+        <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+        <script src="/assets/scripts.js"></script>
+    </body>
+
+</html>
