@@ -165,10 +165,13 @@ function endCall() {
         track.stop();
     }
     prepareCaller();
+    
+    //clear video element (sometimes stuck on firefox)
     document.getElementById("selfview").removeAttribute('src');
     document.getElementById("remoteview").removeAttribute('src');
     document.getElementById("selfview").load()
     document.getElementById("remoteview").load()
+    
     toggleEndCallButton();
 }
 
