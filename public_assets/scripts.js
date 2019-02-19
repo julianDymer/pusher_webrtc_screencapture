@@ -150,7 +150,9 @@ function callUser(user) {
     .catch(error => {
         console.log("an error occured", error, error.message);
         if (error.name == "NotAllowedError"){
+            //catch error that comes from running on mobile
             alert("Sorry, screen capture is not supported on this platform");
+            //cancel this call
             endCall();
         }else{
             throw err;
@@ -256,7 +258,9 @@ channel.bind("client-sdp", function(msg) {
         .catch(error => {
             console.log("an error occured", error, error.message);
             if (error.name == "NotAllowedError"){
+                //catch error that comes from running on mobile
                 alert("Sorry, screen capture is not supported on this platform");
+                //cancel this call, and notify the other client that we have hung up 
                 endCurrentCall();
             }else{
                 throw err;
